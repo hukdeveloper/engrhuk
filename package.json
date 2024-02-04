@@ -9,9 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.2",
+    "@mui/lab": "^5.0.0-alpha.163",
+    "@mui/material": "^5.15.7",
+    "material-testimonial-card": "^0.0.3",
+    "next": "14.0.4",
+    "primereact": "^10.3.3",
     "react": "^18",
+    "react-awesome-slider": "^4.1.0",
+    "react-cv": "^1.6.0",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-slick": "^0.29.0",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "eslint": "^8",

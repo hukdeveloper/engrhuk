@@ -41,7 +41,7 @@ const Services = () => {
           Website Builder Services
         </Typography>
         <Typography variant="body2" marginBottom="15px">
-          Crafting bespoke websites tailored to your needs—whether it's for
+          Crafting bespoke websites tailored to your needs—whether it is for
           e-commerce, business, or personal use.
         </Typography>
       </Stack>

@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import Logo from "../global/Logo";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { changeSidebar } from "../redux/slice";
 
 const navLink = [
   {
@@ -41,9 +43,13 @@ const Header = () => {
   const isScreenMatch = useMediaQuery("(max-width:768px)");
   const router = useRouter();
 
+  const dispatch = useDispatch();
+  const isSidebarOpen = useSelector((data) => data.sidebarOpen);
+
   // const handleRouting = (route) => {
   //   window.open(route, "_blank");
   // };
+
   return (
     <AppBar
       position="sticky"
@@ -66,7 +72,7 @@ const Header = () => {
       >
         {isScreenMatch ? (
           <Stack direction={"row"}>
-            <IconButton>
+            <IconButton onClick={() => dispatch(changeSidebar(!isSidebarOpen))}>
               <Menu />
             </IconButton>
           </Stack>

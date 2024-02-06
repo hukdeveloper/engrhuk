@@ -5,6 +5,8 @@ import Wrapper from "../../components/client/Wrapper";
 import "./globals.css";
 import ThemeRegistry from "@/components/themeRegistry/ThemeRegistry";
 import { PrimeReactProvider } from "primereact/api";
+import { ReduxProviders } from "../../components/redux/providers";
+import Sidebar from "../../components/client/Sidebar";
 
 export const metadata = {
   title: "HUK",
@@ -17,15 +19,16 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeRegistry>
           <PrimeReactProvider>
-            <Wrapper>
-              <Header />
-
-              <Box bgcolor="#fff" borderRadius={2} minHeight="100vh">
-                {children}
-              </Box>
-
-              <Footer />
-            </Wrapper>
+            <ReduxProviders>
+              <Wrapper>
+                <Header />
+                ` <Sidebar />`
+                <Box bgcolor="#fff" borderRadius={2} minHeight="100vh">
+                  {children}
+                </Box>
+                <Footer />
+              </Wrapper>
+            </ReduxProviders>
           </PrimeReactProvider>
         </ThemeRegistry>
       </body>

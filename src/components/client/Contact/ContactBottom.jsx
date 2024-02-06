@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Logo from "../../global/Logo";
 import {
+  Code,
   Facebook,
   Instagram,
   LinkedIn,
@@ -33,8 +34,8 @@ const data = [
     link: "/",
   },
   {
-    title: "StackOverflow",
-    icon: <StackedLineChartTwoTone />,
+    title: "Github",
+    icon: <Code />,
     link: "/",
   },
 ];

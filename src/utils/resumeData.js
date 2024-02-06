@@ -223,4 +223,21 @@ export const mainData = {
       image: "/assets/resume/duke.png",
     },
   ],
+  volunteering: [
+    {
+      title: "LRD Community",
+      year: "2023",
+      employer:
+        "Department of Computer Science, Karakoram International University",
+      desc: "Establised Learning, Research & Development Community for the students of Computer Science with the aim of developing latest technological and programming skills. Further to make digitilization in all aspects of society",
+    },
+    {
+      title: "KIU Literary Society",
+      year: "2022",
+      employer:
+        "Department of Linguistics & Literature, Karakoram International University",
+      desc: "Joined KIU Literary Society as a Web Developer and Computer Expert. Developed website for blogs, articles etc. Further provide an assessment in IT, Social Media and Computer Softwares.",
+    },
+  ],
+  interests: [{}],
 };

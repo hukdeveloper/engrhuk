@@ -90,7 +90,7 @@ const Main = () => {
             label="Name"
             size="small"
           />
-          <Stack direction="row" spacing={1}>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={1}>
             <TextField
               type="email"
               fullWidth

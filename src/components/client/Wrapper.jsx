@@ -12,7 +12,7 @@ const Wrapper = ({ children }) => {
         flexGrow: 1,
         // bgcolor: theme.palette.grey[100],
         // boxShadow: theme.shadows[1],
-        p: "0 !important",
+        // p: "0 !important",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",

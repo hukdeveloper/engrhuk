@@ -46,7 +46,14 @@ const Main = () => {
             <Typography variant="body1" minWidth={120} p="8px">
               {item.title}
             </Typography>
-            <Typography variant="body1" minWidth={120} p="8px">
+            <Typography
+              variant="body1"
+              minWidth={120}
+              p="8px"
+              sx={{
+                wordBreak: "break-all",
+              }}
+            >
               {item.value}
             </Typography>
           </Stack>

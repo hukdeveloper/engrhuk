@@ -17,7 +17,7 @@ const Wrapper = ({ children }) => {
         justifyContent: "space-between",
         flexDirection: "column",
         minHeight: "100vh",
-        gap: 6,
+        gap: 3,
       }}
     >
       {children}

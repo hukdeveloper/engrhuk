@@ -33,10 +33,10 @@ const Footer = () => {
         }}
       >
         <Link href="/">Home</Link>
-        <Link href="/">About</Link>
-        <Link href="/">Contact</Link>
-        <Link href="/">Resume</Link>
-        <Link href="/">Portfolio</Link>
+        <Link href="/expertise">About</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/resume">Resume</Link>
+        <Link href="/portfolio">Portfolio</Link>
       </Box>
       <SocialIcons />
       <Box

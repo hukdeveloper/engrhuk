@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <Box display="flex" alignItems={"center"} gap={1}>
       <Avatar
-        src="/assets/logo.jpeg"
+        src="/assets/logo.jpg"
         sx={{
           height: 35,
           width: 35,

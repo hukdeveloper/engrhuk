@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             <ReduxProviders>
               <Wrapper>
                 <Header />
-                ` <Sidebar />`
+                <Sidebar />
                 <Box bgcolor="#fff" borderRadius={2} minHeight="100vh">
                   {children}
                 </Box>

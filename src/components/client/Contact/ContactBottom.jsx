@@ -16,27 +16,28 @@ import {
   StackedLineChartTwoTone,
 } from "@mui/icons-material";
 import { montserrat } from "../../../utils/font";
+import Link from "next/link";
 
 const data = [
   {
     title: "Facebook",
     icon: <Facebook />,
-    link: "/",
+    link: "https://www.facebook.com/harisdeveloper10101",
   },
   {
     title: "Instagram",
     icon: <Instagram />,
-    link: "/",
+    link: "https://www.instagram.com/engrhuk",
   },
   {
     title: "LinkedIn",
     icon: <LinkedIn />,
-    link: "/",
+    link: "https://www.linkedin.com/in/haris-umar-76a21b1b5/",
   },
   {
     title: "Github",
     icon: <Code />,
-    link: "/",
+    link: "https://github.com/hukdeveloper",
   },
 ];
 
@@ -56,10 +57,9 @@ const ContactBottom = () => {
     >
       <Logo />
       <Typography variant="body1" textAlign="center">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
-        neque laboriosam eaque, earum aliquid cumque rerum vero nostrum
-        voluptates odit repellat labore. Rem sint cum velit, suscipit quo sit
-        tempora.
+        Feel free to contact me anytime. I strive to respond promptly, but
+        please be patient as time zone differences might cause some delays. I
+        will get back to you as soon as possible.
       </Typography>
       <Paper
         sx={{
@@ -71,23 +71,28 @@ const ContactBottom = () => {
           justifyContent: "space-between",
           flexWrap: "wrap",
           p: 1,
+          a: {
+            color: "inherit",
+            textDecoration: "none",
+          },
         }}
       >
         {data.map((item, key) => (
-          <Box
-            key={key}
-            p={1}
-            sx={{
-              borderRadius: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 1,
-            }}
-          >
-            {item.icon}
-            <span className={montserrat.className}>{item.title}</span>
-          </Box>
+          <Link key={key} href={item.link} target="_blank">
+            <Box
+              p={1}
+              sx={{
+                borderRadius: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 1,
+              }}
+            >
+              {item.icon}
+              <span className={montserrat.className}>{item.title}</span>
+            </Box>
+          </Link>
         ))}
       </Paper>
     </Container>

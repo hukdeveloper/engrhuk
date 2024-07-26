@@ -15,6 +15,7 @@ import Logo from "../global/Logo";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { changeSidebar } from "../redux/slice";
+import Link from "next/link";
 
 const navLink = [
   {
@@ -91,9 +92,11 @@ const Header = () => {
           <Logo />
         )}
         <Tooltip title="Quick Contact">
-          <IconButton color="success">
-            <WhatsApp />
-          </IconButton>
+          <Link href={"https://wa.me/message/PAJQHM2CCIMPG1"}>
+            <IconButton color="success">
+              <WhatsApp />
+            </IconButton>
+          </Link>
         </Tooltip>
       </Toolbar>
     </AppBar>

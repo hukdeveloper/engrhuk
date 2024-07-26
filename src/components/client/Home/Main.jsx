@@ -16,10 +16,14 @@ import {
   useTheme,
 } from "@mui/material";
 import SocialIcons from "../SocialIcons";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Main = () => {
   const theme = useTheme();
-  const match = useMediaQuery("(max-width:333px)");
+  const match = useMediaQuery("(max-width:368px)");
+  const match2 = useMediaQuery("(max-width:600px)");
+  const router = useRouter();
   return (
     <Box
       display="flex"
@@ -32,10 +36,10 @@ const Main = () => {
         flexDirection="column"
         alignItems={"center"}
         // justifyContent={"center"}
-        minHeight={300}
+        minHeight={400}
         className="bgGradient"
         width="100%"
-        p={"30px 10px"}
+        p={"40px 10px"}
       >
         <SocialIcons />
         <Typography
@@ -66,13 +70,21 @@ const Main = () => {
           challenges and seize opportunities for continuous learning.
         </Typography>
         <Stack direction={match ? "column" : "row"} mt={2} spacing={2}>
-          <Button startIcon={<DocumentScanner />} variant="outlined">
-            Get Resume
-          </Button>
+          <Link href={"/assets/resume.pdf"} target="_blank" download>
+            <Button
+              startIcon={<DocumentScanner />}
+              variant={!match2 ? "outlined" : "contained"}
+              fullWidth={match && true}
+            >
+              Get Resume
+            </Button>
+          </Link>
           <Button
+            fullWidth={match && true}
             startIcon={<ContactEmergency />}
             variant="outlined"
             color="success"
+            onClick={() => router.push("/contact")}
           >
             Contact Now!
           </Button>
